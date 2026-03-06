@@ -1,0 +1,12 @@
+/* Minimal App-level overrides — core styles live in index.css */
+
+/* Ensure sections don't clip floating stickers */
+section {
+  position: relative;
+}
+
+/* Ensure sticker emoji renders crisply */
+.floating-sticker {
+  font-style: normal;
+  line-height: 1;
+}
