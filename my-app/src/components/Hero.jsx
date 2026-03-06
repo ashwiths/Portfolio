@@ -32,8 +32,9 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-br from-pastel-lavender via-pastel-cream to-pastel-peach dark:from-dark-bg dark:via-dark-card dark:to-dark-surface" />
 
             {/* Floating blobs */}
-            <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-purple-200/40 dark:bg-purple-900/20 blur-3xl" />
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-orange-200/30 dark:bg-orange-900/10 blur-3xl" />
+            <div className="absolute top-1/4 left-1/4 w-80 h-80 rounded-full bg-violet-300/35 dark:bg-violet-900/25 blur-3xl" />
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-rose-300/30 dark:bg-rose-900/15 blur-3xl" />
+            <div className="absolute top-3/4 left-1/2 w-64 h-64 rounded-full bg-fuchsia-200/25 dark:bg-fuchsia-900/10 blur-3xl" />
 
             {/* Floating stickers */}
             <Sticker emoji="✨" className="top-28 left-12 md:left-24" animDelay={0.4} size="text-4xl" style={{ position: 'absolute' }} />
@@ -43,8 +44,9 @@ export default function Hero() {
             <Sticker emoji="🎨" className="bottom-48 right-16 md:right-48" animDelay={1.1} size="text-3xl" style={{ position: 'absolute' }} />
             <Sticker emoji="📌" className="top-20 right-1/3" animDelay={0.6} size="text-2xl" style={{ position: 'absolute' }} />
 
-            {/* Paper tape strip top */}
-            <div className="absolute top-8 left-1/2 -translate-x-1/2 w-40 h-6 bg-yellow-200/70 dark:bg-yellow-900/40 rounded-sm shadow-tape rotate-[-1deg] opacity-80" />
+            {/* Tape strip decorations */}
+            <div className="absolute top-8 left-1/2 -translate-x-1/2 w-40 h-6 bg-violet-300/60 dark:bg-violet-900/40 rounded-sm shadow-tape rotate-[-1deg] opacity-80" />
+            <div className="absolute top-10 right-1/4 w-24 h-5 bg-rose-300/50 dark:bg-rose-900/30 rounded-sm shadow-tape rotate-[2deg] opacity-70 hidden md:block" />
 
             {/* Content */}
             <motion.div
@@ -70,7 +72,7 @@ export default function Hero() {
 
                 {/* Title */}
                 <motion.div variants={itemVariants} className="mb-4">
-                    <span className="inline-block font-handwritten text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-200 bg-white/50 dark:bg-dark-card/50 px-5 py-2 rounded-full border border-purple-200/60 dark:border-dark-border shadow-sticker">
+                    <span className="inline-block font-handwritten text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-200 bg-white/50 dark:bg-dark-card/50 px-5 py-2 rounded-full border border-violet-300/60 dark:border-dark-border shadow-sticker">
                         Full Stack Developer 💼
                     </span>
                 </motion.div>

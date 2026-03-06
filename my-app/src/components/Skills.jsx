@@ -2,14 +2,14 @@ import { motion } from 'framer-motion';
 import Sticker from './Sticker';
 
 const skills = [
-    { name: 'HTML', emoji: '🏗️', color: 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300', border: 'border-orange-300/60' },
-    { name: 'CSS', emoji: '🎨', color: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300', border: 'border-blue-300/60' },
-    { name: 'React', emoji: '⚛️', color: 'bg-cyan-100 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300', border: 'border-cyan-300/60' },
-    { name: 'Web Performance', emoji: '⚡', color: 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300', border: 'border-yellow-300/60' },
-    { name: 'Web Analytics', emoji: '📊', color: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300', border: 'border-purple-300/60' },
-    { name: 'Quality Assurance', emoji: '✅', color: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300', border: 'border-green-300/60' },
-    { name: 'Teamwork', emoji: '🤝', color: 'bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300', border: 'border-pink-300/60' },
-    { name: 'Video Editing', emoji: '🎬', color: 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300', border: 'border-red-300/60' },
+    { name: 'HTML', emoji: '🏗️', color: 'bg-rose-100    dark:bg-rose-900/30    text-rose-700    dark:text-rose-300', border: 'border-rose-300/60' },
+    { name: 'CSS', emoji: '🎨', color: 'bg-violet-100  dark:bg-violet-900/30  text-violet-700  dark:text-violet-300', border: 'border-violet-300/60' },
+    { name: 'React', emoji: '⚛️', color: 'bg-sky-100     dark:bg-sky-900/30     text-sky-700     dark:text-sky-300', border: 'border-sky-300/60' },
+    { name: 'Web Performance', emoji: '⚡', color: 'bg-amber-100   dark:bg-amber-900/30   text-amber-700   dark:text-amber-300', border: 'border-amber-300/60' },
+    { name: 'Web Analytics', emoji: '📊', color: 'bg-purple-100  dark:bg-purple-900/30  text-purple-700  dark:text-purple-300', border: 'border-purple-300/60' },
+    { name: 'Quality Assurance', emoji: '✅', color: 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300', border: 'border-emerald-300/60' },
+    { name: 'Teamwork', emoji: '🤝', color: 'bg-fuchsia-100 dark:bg-fuchsia-900/30 text-fuchsia-700 dark:text-fuchsia-300', border: 'border-fuchsia-300/60' },
+    { name: 'Video Editing', emoji: '🎬', color: 'bg-pink-100    dark:bg-pink-900/30    text-pink-700    dark:text-pink-300', border: 'border-pink-300/60' },
 ];
 
 const rotations = [-3, 2, -1, 3, -2, 1, -3, 2];
@@ -17,7 +17,7 @@ const rotations = [-3, 2, -1, 3, -2, 1, -3, 2];
 export default function Skills() {
     return (
         <section id="skills" className="relative py-24 overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-bl from-pastel-yellow/40 via-transparent to-pastel-lilac/40 dark:from-dark-surface/30 dark:to-dark-card/30" />
+            <div className="absolute inset-0 bg-gradient-to-bl from-pastel-lilac/50 via-transparent to-pastel-peach/40 dark:from-dark-surface/30 dark:to-dark-card/30" />
 
             {/* Stickers */}
             <Sticker emoji="🏷️" className="top-12 left-8 md:left-24" animDelay={0.4} size="text-3xl" style={{ position: 'absolute' }} />
@@ -85,7 +85,7 @@ export default function Skills() {
                     transition={{ delay: 0.8, duration: 0.6 }}
                 >
                     <div className="glass-card px-6 py-3 relative">
-                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-5 bg-yellow-200/80 dark:bg-yellow-900/50 rounded-sm shadow-tape" />
+                        <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-5 bg-violet-200/80 dark:bg-violet-900/50 rounded-sm shadow-tape" />
                         <p className="font-handwritten text-gray-500 dark:text-gray-400 text-lg">
                             always learning, always growing ✨
                         </p>

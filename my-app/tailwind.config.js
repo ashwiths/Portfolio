@@ -13,21 +13,22 @@ export default {
       },
       colors: {
         pastel: {
-          lavender: '#E8E0FF',
-          peach: '#FFE8D9',
-          mint: '#D4F5E9',
-          sky: '#D9EEFF',
-          cream: '#FFF9F0',
-          pink: '#FFD6E8',
-          yellow: '#FFF3C4',
-          lilac: '#F0D9FF',
+          /* "Violet Dusk" light palette */
+          lavender: '#ECE6FF',   /* soft violet */
+          peach: '#FFE2EF',   /* blush rose  */
+          mint: '#E3F5F1',   /* sage tint   */
+          sky: '#E5E9FF',   /* periwinkle  */
+          cream: '#FAF8FF',   /* violet-white */
+          pink: '#FFD6F0',   /* hot-pink tint */
+          yellow: '#FFF1D6',   /* amber tint   */
+          lilac: '#F3E8FF',   /* deep lilac   */
         },
         dark: {
-          bg: '#1A1625',
-          card: '#241F35',
-          surface: '#2D2844',
-          border: '#3D3660',
-          muted: '#6B6585',
+          bg: '#0C0914',   /* deepest midnight violet */
+          card: '#16102A',   /* dark plum              */
+          surface: '#211639',   /* purple surface          */
+          border: '#392B5C',   /* violet border           */
+          muted: '#7C6EA8',   /* muted lavender          */
         },
       },
       animation: {
@@ -48,28 +49,16 @@ export default {
           '0%, 100%': { transform: 'rotate(-2deg)' },
           '50%': { transform: 'rotate(2deg)' },
         },
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        slideUp: {
-          '0%': { opacity: '0', transform: 'translateY(30px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        pop: {
-          '0%': { transform: 'scale(0.8)' },
-          '100%': { transform: 'scale(1)' },
-        },
+        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
+        slideUp: { '0%': { opacity: '0', transform: 'translateY(30px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
+        pop: { '0%': { transform: 'scale(0.8)' }, '100%': { transform: 'scale(1)' } },
       },
       boxShadow: {
-        'sticker': '3px 4px 0px rgba(0,0,0,0.2)',
-        'sticker-lg': '5px 7px 0px rgba(0,0,0,0.15)',
-        'card': '0 8px 32px rgba(0,0,0,0.08)',
-        'card-dark': '0 8px 32px rgba(0,0,0,0.4)',
-        'tape': '2px 2px 8px rgba(0,0,0,0.15)',
-      },
-      backgroundImage: {
-        'paper': "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E\")",
+        'sticker': '3px 4px 0px rgba(0,0,0,0.18)',
+        'sticker-lg': '5px 7px 0px rgba(0,0,0,0.14)',
+        'card': '0 8px 32px rgba(120, 80, 200, 0.10)',
+        'card-dark': '0 8px 40px rgba(0,0,0,0.55)',
+        'tape': '2px 2px 8px rgba(0,0,0,0.12)',
       },
     },
   },

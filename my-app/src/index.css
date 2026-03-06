@@ -4,16 +4,23 @@
 
 @layer base {
   :root {
-    --color-accent: #9B7FD4;
-    --color-accent2: #F4A27E;
-    --color-bg: #FFF9F0;
-    --scrollbar-thumb: #c4b5fd;
+    --color-accent: #9333EA;
+    /* vivid violet  */
+    --color-accent2: #EC4899;
+    /* vivid rose    */
+    --color-bg: #FAF8FF;
+    /* violet-tinted white */
+    --scrollbar-thumb: #A855F7;
   }
+
   .dark {
-    --color-accent: #B39DEC;
-    --color-accent2: #F4A27E;
-    --color-bg: #1A1625;
-    --scrollbar-thumb: #6d5ea8;
+    --color-accent: #C084FC;
+    /* soft violet   */
+    --color-accent2: #F472B6;
+    /* soft rose     */
+    --color-bg: #0C0914;
+    /* midnight plum */
+    --scrollbar-thumb: #7C3AED;
   }
 
   * {
@@ -29,77 +36,89 @@
     background-color: var(--color-bg);
   }
 
-  /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
   }
+
   ::-webkit-scrollbar-track {
     @apply bg-pastel-cream dark:bg-dark-bg;
   }
+
   ::-webkit-scrollbar-thumb {
     background: var(--scrollbar-thumb);
     border-radius: 999px;
   }
 
-  h1, h2, h3 {
+  h1,
+  h2,
+  h3 {
     @apply leading-tight;
   }
 }
 
 @layer components {
-  /* Paper tape strip */
+
+  /* ── Paper tape strips ── */
   .tape {
     @apply relative inline-block px-4 py-1 text-sm font-handwritten font-semibold tracking-wide;
-    background: rgba(255, 234, 167, 0.85);
-    box-shadow: var(--tw-shadow-tape, 2px 2px 8px rgba(0,0,0,0.12));
+    background: rgba(255, 234, 167, 0.88);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.10);
     transform: rotate(-1deg);
   }
+
   .tape-blue {
-    background: rgba(186, 225, 255, 0.85);
-  }
-  .tape-pink {
-    background: rgba(255, 214, 232, 0.85);
-  }
-  .tape-mint {
-    background: rgba(167, 243, 208, 0.85);
-  }
-  .tape-purple {
-    background: rgba(221, 214, 254, 0.85);
+    background: rgba(199, 210, 254, 0.90);
   }
 
-  /* Sticker badge */
+  /* indigo tint  */
+  .tape-pink {
+    background: rgba(251, 207, 232, 0.90);
+  }
+
+  /* rose         */
+  .tape-mint {
+    background: rgba(167, 243, 208, 0.88);
+  }
+
+  /* sage         */
+  .tape-purple {
+    background: rgba(233, 213, 255, 0.92);
+  }
+
+  /* violet       */
+
+  /* ── Sticker badge ── */
   .sticker-badge {
     @apply inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium font-sans;
-    box-shadow: 3px 3px 0px rgba(0,0,0,0.15);
+    box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.14);
     transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
   }
+
   .sticker-badge:hover {
-    transform: translateY(-3px) rotate(-2deg) scale(1.05);
-    box-shadow: 5px 7px 0px rgba(0,0,0,0.12);
+    transform: translateY(-3px) rotate(-2deg) scale(1.06);
+    box-shadow: 5px 7px 0px rgba(0, 0, 0, 0.11);
   }
 
-  /* Glass card */
+  /* ── Glass card ── */
   .glass-card {
-    @apply rounded-2xl border border-white/60 dark:border-dark-border/60;
-    background: rgba(255, 255, 255, 0.65);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 8px 32px rgba(149, 117, 205, 0.08), 0 1px 0 rgba(255,255,255,0.6) inset;
-  }
-  .dark .glass-card {
-    background: rgba(36, 31, 53, 0.75);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    @apply rounded-2xl border border-white/70 dark:border-dark-border/60;
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 8px 32px rgba(120, 60, 200, 0.08), 0 1px 0 rgba(255, 255, 255, 0.7) inset;
   }
 
-  /* Section title */
+  .dark .glass-card {
+    background: rgba(22, 16, 42, 0.82);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.50);
+  }
+
   .section-title {
     @apply font-handwritten text-4xl md:text-5xl font-bold;
   }
 
-  /* Floating sticker element */
   .floating-sticker {
     @apply absolute pointer-events-none select-none;
-    animation: float 4s ease-in-out infinite;
   }
 }
 
@@ -107,29 +126,36 @@
   .font-handwritten {
     font-family: 'Caveat', cursive;
   }
+
+  /* Rose → Violet gradient on hero name */
   .text-gradient {
-    background: linear-gradient(135deg, #9B7FD4 0%, #F4A27E 100%);
+    background: linear-gradient(135deg, #9333EA 0%, #EC4899 55%, #F97316 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* Teal gradient for secondary accents */
   .text-gradient-2 {
-    background: linear-gradient(135deg, #34d399 0%, #60a5fa 100%);
+    background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
   .bg-paper-texture {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
   }
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-14px); }
-}
 
-@keyframes float-alt {
-  0%, 100% { transform: translateY(0px) rotate(var(--r, 0deg)); }
-  50% { transform: translateY(-10px) rotate(var(--r, 0deg)); }
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
 }
