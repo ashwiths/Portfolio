@@ -65,18 +65,10 @@ export default function Hero() {
                 initial="hidden"
                 animate="visible"
             >
-                <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 lg:gap-20">
+                <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-16 lg:gap-20">
 
-                    {/* ── LEFT: Profile photo ── */}
-                    <motion.div
-                        variants={itemVariants}
-                        className="flex-shrink-0 w-full md:w-auto flex justify-center md:justify-start"
-                    >
-                        <HeroPhoto />
-                    </motion.div>
-
-                    {/* ── RIGHT: Text content ── */}
-                    <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+                    {/* ── LEFT: Text content ── */}
+                    <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left mt-8 md:mt-0">
 
                         {/* Tape strip + welcome badge */}
                         <motion.div variants={itemVariants} className="flex flex-col items-center md:items-start mb-5 gap-1">
@@ -155,6 +147,15 @@ export default function Hero() {
                         </motion.div>
 
                     </div>
+
+                    {/* ── RIGHT: Profile photo ── */}
+                    <motion.div
+                        variants={itemVariants}
+                        className="flex-shrink-0 w-full md:w-auto flex justify-center md:justify-end"
+                    >
+                        <HeroPhoto />
+                    </motion.div>
+
                 </div>
             </motion.div>
         </section>
