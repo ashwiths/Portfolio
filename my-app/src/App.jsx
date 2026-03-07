@@ -1,5 +1,5 @@
 import { ThemeProvider } from './context/ThemeContext';
-import Navbar from './components/Navbar';
+import BreadcrumbBar from './components/BreadcrumbBar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -13,8 +13,8 @@ import './App.css';
 function App() {
   return (
     <ThemeProvider>
-      <div className="relative bg-pastel-cream dark:bg-dark-bg min-h-screen font-sans">
-        <Navbar />
+      <div className="relative bg-pastel-cream dark:bg-dark-bg min-h-screen font-sans pt-14">
+        <BreadcrumbBar />
         <main>
           <Hero />
           <About />

@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiMail, FiArrowDown } from 'react-icons/fi';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FiGithub, FiLinkedin, FiMail, FiArrowDown, FiDownload, FiCheck } from 'react-icons/fi';
 import { Link } from 'react-scroll';
 import Sticker from './Sticker';
 import HeroPhoto from './HeroPhoto';
@@ -24,6 +25,33 @@ const itemVariants = {
 };
 
 export default function Hero() {
+    const [isDownloading, setIsDownloading] = useState(false);
+    const [downloadComplete, setDownloadComplete] = useState(false);
+
+    const handleDownload = () => {
+        setIsDownloading(true);
+
+        // Create an invisible link to trigger the download
+        const link = document.createElement('a');
+        link.href = '/Infant_Ashil_A_Resume.pdf';
+        link.download = 'Infant_Ashil_A_Resume.pdf';
+        document.body.appendChild(link);
+
+        // Simulate a slight delay for the animation
+        setTimeout(() => {
+            link.click();
+            document.body.removeChild(link);
+
+            setIsDownloading(false);
+            setDownloadComplete(true);
+
+            // Reset button state after a few seconds
+            setTimeout(() => {
+                setDownloadComplete(false);
+            }, 3000);
+        }, 800);
+    };
+
     return (
         <section
             id="hero"
@@ -109,8 +137,8 @@ export default function Hero() {
                             Passionate about building responsive web applications that are fast, beautiful, and scalable.
                         </motion.p>
 
-                        {/* Social icons */}
-                        <motion.div variants={itemVariants} className="flex gap-4 mb-10">
+                        {/* Social icons & Resume Download */}
+                        <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-10 items-center justify-center md:justify-start">
                             {socials.map(({ icon: Icon, href, label }) => (
                                 <motion.a
                                     key={label}
@@ -120,15 +148,77 @@ export default function Hero() {
                                     aria-label={label}
                                     whileHover={{ scale: 1.18, rotate: -5, y: -3 }}
                                     whileTap={{ scale: 0.93 }}
-                                    className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 shadow-sticker transition-colors"
+                                    className="w-12 h-12 rounded-full glass-card flex items-center justify-center text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 shadow-sticker transition-colors shrink-0"
                                 >
                                     <Icon className="w-5 h-5" />
                                 </motion.a>
                             ))}
+
+                            {/* Resume Download Button */}
+                            <motion.button
+                                onClick={handleDownload}
+                                disabled={isDownloading || downloadComplete}
+                                whileHover={!isDownloading && !downloadComplete ? { scale: 1.05, y: -2 } : {}}
+                                whileTap={!isDownloading && !downloadComplete ? { scale: 0.95 } : {}}
+                                className={`relative h-12 px-6 rounded-full font-medium font-sans flex items-center gap-2 overflow-hidden transition-all duration-300 shadow-sticker ml-2
+                                    ${downloadComplete
+                                        ? 'bg-green-500 text-white dark:bg-green-600'
+                                        : 'bg-violet-600 text-white hover:bg-violet-500 dark:bg-violet-700 dark:hover:bg-violet-600'
+                                    }`}
+                            >
+                                <AnimatePresence mode="wait">
+                                    {isDownloading ? (
+                                        <motion.div
+                                            key="downloading"
+                                            initial={{ opacity: 0, scale: 0.8 }}
+                                            animate={{ opacity: 1, scale: 1 }}
+                                            exit={{ opacity: 0, y: -20 }}
+                                            className="flex items-center gap-2"
+                                        >
+                                            <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                                                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                            </svg>
+                                            <span>Downloading...</span>
+                                        </motion.div>
+                                    ) : downloadComplete ? (
+                                        <motion.div
+                                            key="complete"
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            className="flex items-center gap-2"
+                                        >
+                                            <FiCheck className="w-5 h-5" />
+                                            <span>Downloaded!</span>
+                                        </motion.div>
+                                    ) : (
+                                        <motion.div
+                                            key="idle"
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            exit={{ opacity: 0, y: -20 }}
+                                            className="flex items-center gap-2"
+                                        >
+                                            <FiDownload className="w-5 h-5" />
+                                            <span>Resume</span>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+
+                                {/* Background progress animation overlay */}
+                                {isDownloading && (
+                                    <motion.div
+                                        initial={{ width: "0%" }}
+                                        animate={{ width: "100%" }}
+                                        transition={{ duration: 0.8 }}
+                                        className="absolute left-0 top-0 bottom-0 bg-white/20 pointer-events-none"
+                                    />
+                                )}
+                            </motion.button>
                         </motion.div>
 
                         {/* Scroll CTA */}
-                        <motion.div variants={itemVariants}>
+                        <motion.div variants={itemVariants} className="flex w-full justify-center md:justify-start">
                             <Link to="about" smooth duration={700}>
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}

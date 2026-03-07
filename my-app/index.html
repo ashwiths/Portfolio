@@ -1,17 +1,44 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Infant Ashil A – Full Stack Developer Portfolio. Passionate about building responsive, scalable web applications." />
-    <title>Infant Ashil A · Full Stack Developer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Infant Ashil A – Full Stack Developer Portfolio. Passionate about building responsive, scalable web applications." />
+  <title>Infant Ashil A · Full Stack Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body class="select-none" oncontextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    // Basic anti-scraper and devTools protection 
+    document.addEventListener('keydown', function (e) {
+      // Disable F12
+      if (e.key === 'F12' || e.keyCode === 123) {
+        e.preventDefault();
+      }
+      // Disable Ctrl+Shift+I / Cmd+Option+I
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'I' || e.key === 'i')) {
+        e.preventDefault();
+      }
+      // Disable Ctrl+Shift+J / Cmd+Option+J
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'J' || e.key === 'j')) {
+        e.preventDefault();
+      }
+      // Disable Ctrl+U / Cmd+U (View Source)
+      if ((e.ctrlKey || e.metaKey) && (e.key === 'U' || e.key === 'u')) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</body>
+
 </html>
