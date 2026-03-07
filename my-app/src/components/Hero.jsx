@@ -94,17 +94,20 @@ export default function Hero() {
                     {/* ── LEFT: Text content ── */}
                     <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left mt-8 md:mt-0">
 
-                        {/* Tape strip + welcome badge */}
-                        <motion.div variants={itemVariants} className="flex flex-col items-center md:items-start mb-5 gap-1">
-                            <div
-                                className="w-24 h-5 rounded-sm opacity-75"
-                                style={{
-                                    background: 'rgba(167,139,250,0.42)',
-                                    border: '1px solid rgba(167,139,250,0.55)',
-                                    transform: 'rotate(-1deg)',
-                                    boxShadow: '0 2px 6px rgba(139,92,246,0.10)',
-                                }}
-                            />
+                        {/* Availability badge + welcome tape */}
+                        <motion.div variants={itemVariants} className="flex flex-col items-center md:items-start mb-5 gap-3">
+                            {/* Availability Badge */}
+                            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/60 dark:bg-dark-card/60 border border-gray-200/50 dark:border-dark-border/50 backdrop-blur-sm shadow-sm transition-transform hover:scale-105">
+                                <span className="relative flex h-2.5 w-2.5 shrink-0">
+                                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                                </span>
+                                <span className="text-sm font-medium text-gray-700 dark:text-gray-300 font-sans">
+                                    Available for Projects
+                                </span>
+                            </div>
+
+                            {/* Welcome tape */}
                             <span className="tape tape-purple font-handwritten text-lg">
                                 👋 Welcome to my portfolio
                             </span>
@@ -123,6 +126,15 @@ export default function Hero() {
                             <span className="inline-block font-handwritten text-xl md:text-2xl lg:text-3xl font-semibold text-gray-700 dark:text-gray-200 bg-white/55 dark:bg-dark-card/55 px-5 py-2 rounded-full border border-violet-300/60 dark:border-dark-border shadow-sticker">
                                 Full Stack Developer 💼
                             </span>
+                        </motion.div>
+
+                        {/* Personal Motto */}
+                        <motion.div variants={itemVariants} className="mb-6 relative flex items-center justify-center md:justify-start">
+                            <span className="relative z-10 font-handwritten text-lg md:text-xl text-transparent bg-clip-text bg-gradient-to-r from-violet-500 via-fuchsia-500 to-rose-500 dark:from-violet-400 dark:via-fuchsia-400 dark:to-rose-400 font-bold tracking-wide">
+                                ✨ Code • Build • Launch • Repeat ✨
+                            </span>
+                            {/* Subtle background glow */}
+                            <div className="absolute inset-x-0 bottom-1 h-3 bg-fuchsia-200/40 dark:bg-fuchsia-900/30 blur-sm rounded-full -z-10 w-[110%] -left-[5%] pointer-events-none" />
                         </motion.div>
 
                         {/* Tagline */}
