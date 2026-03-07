@@ -6,7 +6,7 @@ import { useTheme } from '../context/ThemeContext'; // Assuming ThemeProvider ex
 
 export default function BreadcrumbBar() {
     const [currentSection, setCurrentSection] = useState('home');
-    const { isDark, toggleTheme } = useTheme();
+    const { dark: isDark, toggle: toggleTheme } = useTheme();
 
     useEffect(() => {
         const sections = document.querySelectorAll('section[id]');
