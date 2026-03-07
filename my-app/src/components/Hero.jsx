@@ -82,10 +82,6 @@ export default function Hero() {
             {/* Bottom-left: git */}
             <Sticker type="git" className="bottom-28 left-5 md:left-14" animDelay={0.8} size={54} rotate={-8} opacity={0.60} />
 
-            {/* Bottom-right: note + browser */}
-            <Sticker type="note" className="bottom-36 right-5 md:right-14" animDelay={1.1} size={50} rotate={7} opacity={0.60} />
-            <Sticker type="browser" className="bottom-10 right-5 md:right-12 hidden sm:block" animDelay={0.7} size={46} rotate={-4} opacity={0.55} />
-
             {/* ── Main content: two-column on md+, stacked on mobile ── */}
             <motion.div
                 className="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-12 lg:px-16 py-20"

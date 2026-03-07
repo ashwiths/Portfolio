@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import Sticker from './Sticker';
 
 export default function About() {
     const ref = useRef(null);
@@ -11,11 +10,6 @@ export default function About() {
         <section id="about" className="relative py-24 overflow-hidden">
             {/* BG */}
             <div className="absolute inset-0 bg-gradient-to-br from-pastel-sky/50 via-transparent to-pastel-mint/30 dark:from-dark-card/50 dark:to-transparent" />
-
-            {/* Stickers */}
-            <Sticker emoji="📖" className="top-10 right-8 md:right-20" animDelay={0.3} size="text-3xl" style={{ position: 'absolute' }} />
-            <Sticker emoji="🌟" className="bottom-16 left-8 md:left-16" animDelay={0.5} size="text-2xl" style={{ position: 'absolute' }} />
-            <Sticker emoji="☕" className="top-1/3 right-4 md:right-12" animDelay={0.8} size="text-2xl" style={{ position: 'absolute' }} />
 
             <div className="relative z-10 max-w-5xl mx-auto px-6">
                 {/* Section header */}

@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { FiExternalLink, FiGlobe } from 'react-icons/fi';
-import Sticker from './Sticker';
 
 const products = [
     {
@@ -58,12 +57,6 @@ export default function FeaturedWork() {
         <section id="featured" className="relative py-24 overflow-hidden">
             {/* Background gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-pastel-sky/50 via-pastel-cream to-pastel-lilac/40 dark:from-dark-bg dark:via-dark-card/60 dark:to-dark-surface/40" />
-
-            {/* Floating stickers */}
-            <Sticker emoji="🌐" className="top-10 left-8 md:left-24" animDelay={0.3} size="text-3xl" style={{ position: 'absolute' }} />
-            <Sticker emoji="🏆" className="top-16 right-10 md:right-28" animDelay={0.6} size="text-3xl" style={{ position: 'absolute' }} />
-            <Sticker emoji="🛠️" className="bottom-12 left-10 md:left-32" animDelay={0.9} size="text-2xl" style={{ position: 'absolute' }} />
-            <Sticker emoji="💫" className="bottom-20 right-8 md:right-20" animDelay={0.5} size="text-2xl" style={{ position: 'absolute' }} />
 
             <div className="relative z-10 max-w-6xl mx-auto px-6">
                 {/* Section header */}

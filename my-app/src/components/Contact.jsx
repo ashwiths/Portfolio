@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiLinkedin, FiMail, FiSend } from 'react-icons/fi';
-import Sticker from './Sticker';
 
 const links = [
     {
@@ -33,11 +32,6 @@ export default function Contact() {
     return (
         <section id="contact" className="relative py-24 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-pastel-lavender/60 via-pastel-cream to-pastel-pink/40 dark:from-dark-card/60 dark:via-dark-bg dark:to-dark-surface/40" />
-
-            {/* Stickers */}
-            <Sticker emoji="💌" className="top-12 left-8 md:left-28" animDelay={0.3} size="text-3xl" style={{ position: 'absolute' }} />
-            <Sticker emoji="✉️" className="top-20 right-10 md:right-32" animDelay={0.6} size="text-2xl" style={{ position: 'absolute' }} />
-            <Sticker emoji="🤙" className="bottom-20 right-8 md:right-24" animDelay={0.9} size="text-3xl" style={{ position: 'absolute' }} />
 
             <div className="relative z-10 max-w-2xl mx-auto px-6 text-center">
                 {/* Header */}

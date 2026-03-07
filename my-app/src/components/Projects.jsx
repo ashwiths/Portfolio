@@ -1,37 +1,176 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
-import Sticker from './Sticker';
 
 const projects = [
     {
-        title: 'Portfolio Website',
-        description: 'A digital scrapbook-inspired personal portfolio built with React, Vite, and Tailwind CSS. Features smooth animations, dark mode, and a playful sticker aesthetic.',
-        tech: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+        title: 'Portfolio',
+        description: 'A modern personal portfolio website built with React and JavaScript, showcasing projects, skills, and professional experience with smooth animations.',
+        tech: ['React', 'JavaScript', 'Tailwind CSS', 'Vite'],
         emoji: '🎨',
         gradient: 'from-purple-400 to-pink-400',
-        github: 'https://github.com/ashwiths',
-        color: 'bg-purple-50 dark:bg-purple-900/20',
+        github: 'https://github.com/ashwiths/Portfolio',
+        demo: 'https://github.com/ashwiths/Portfolio',
         border: 'border-purple-200/60 dark:border-purple-700/40',
     },
     {
-        title: 'Full Stack Web App',
-        description: 'A scalable full-stack web application with React frontend and Node.js backend. Implements REST API design, authentication, and cross-browser compatibility.',
-        tech: ['React', 'Node.js', 'REST API', 'MongoDB'],
-        emoji: '🚀',
-        gradient: 'from-blue-400 to-cyan-400',
-        github: 'https://github.com/ashwiths',
-        color: 'bg-blue-50 dark:bg-blue-900/20',
+        title: 'Projecthub',
+        description: 'A platform for students and developers to discover and explore software project ideas, organized by category with a developer-friendly interface.',
+        tech: ['JavaScript', 'React', 'Node.js'],
+        emoji: '📦',
+        gradient: 'from-violet-400 to-indigo-400',
+        github: 'https://github.com/ashwiths/Projecthub',
+        demo: 'https://projecthub.bluelabtech.space/',
+        border: 'border-violet-200/60 dark:border-violet-700/40',
+    },
+    {
+        title: 'Terminalhub',
+        description: 'An interactive terminal-style hub built with JavaScript, featuring Git and terminal commands organized into categories with copy-to-clipboard functionality.',
+        tech: ['JavaScript', 'React', 'CSS'],
+        emoji: '💻',
+        gradient: 'from-slate-500 to-gray-400',
+        github: 'https://github.com/ashwiths/Terminalhub',
+        demo: 'https://github.com/ashwiths/Terminalhub',
+        border: 'border-slate-200/60 dark:border-slate-700/40',
+    },
+    {
+        title: 'Student Portal',
+        description: 'A web-based student portal system designed to streamline academic workflows, manage student data, and provide a centralized dashboard for educational resources.',
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        emoji: '🎓',
+        gradient: 'from-blue-400 to-sky-400',
+        github: 'https://github.com/ashwiths/Student-portal-',
+        demo: 'https://github.com/ashwiths/Student-portal-',
         border: 'border-blue-200/60 dark:border-blue-700/40',
     },
     {
-        title: 'QA Testing Framework',
-        description: 'A comprehensive testing suite featuring unit tests, integration tests, and cross-browser QA procedures. Includes testing documentation and CI-ready configurations.',
-        tech: ['JavaScript', 'Testing', 'QA', 'Documentation'],
-        emoji: '✅',
-        gradient: 'from-green-400 to-emerald-400',
-        github: 'https://github.com/ashwiths',
-        color: 'bg-green-50 dark:bg-green-900/20',
-        border: 'border-green-200/60 dark:border-green-700/40',
+        title: 'Student Feedback Automation',
+        description: 'An automation tool that streamlines the collection, management, and analysis of student feedback for academic institutions, reducing manual processing effort.',
+        tech: ['Automation', 'JavaScript', 'Node.js'],
+        emoji: '📋',
+        gradient: 'from-amber-400 to-orange-400',
+        github: 'https://github.com/ashwiths/student-feedback-automation',
+        demo: 'https://github.com/ashwiths/student-feedback-automation',
+        border: 'border-amber-200/60 dark:border-amber-700/40',
+    },
+    {
+        title: 'GenAI Malware Detection',
+        description: 'A cutting-edge malware detection system leveraging Generative AI and machine learning to identify and classify malicious software patterns in real time.',
+        tech: ['Python', 'GenAI', 'Machine Learning', 'Security'],
+        emoji: '🛡️',
+        gradient: 'from-red-400 to-rose-400',
+        github: 'https://github.com/ashwiths/GenAI-Malware-Detection',
+        demo: 'https://github.com/ashwiths/GenAI-Malware-Detection',
+        border: 'border-red-200/60 dark:border-red-700/40',
+    },
+    {
+        title: 'Trip Planning App',
+        description: 'A smart trip planning web application that helps users organize travel itineraries, discover destinations, and manage trip details with an intuitive interface.',
+        tech: ['JavaScript', 'React', 'API Integration'],
+        emoji: '✈️',
+        gradient: 'from-cyan-400 to-teal-400',
+        github: 'https://github.com/ashwiths/Trip-planing',
+        demo: 'https://github.com/ashwiths/Trip-planing',
+        border: 'border-cyan-200/60 dark:border-cyan-700/40',
+    },
+    {
+        title: 'Admit Dashboard',
+        description: 'An admin dashboard for managing admissions, built with JavaScript. Provides an overview of applicants, status tracking, and data visualization for administrators.',
+        tech: ['JavaScript', 'React', 'Dashboard', 'MongoDB'],
+        emoji: '📊',
+        gradient: 'from-indigo-400 to-blue-400',
+        github: 'https://github.com/ashwiths/admit-dashboard',
+        demo: 'https://github.com/ashwiths/admit-dashboard',
+        border: 'border-indigo-200/60 dark:border-indigo-700/40',
+    },
+    {
+        title: 'Passion Student AI Tutor (Hackathon)',
+        description: 'A hackathon project — an AI-powered student tutor that delivers personalized learning experiences, answers academic queries, and adapts to individual student needs.',
+        tech: ['JavaScript', 'AI', 'React', 'Node.js'],
+        emoji: '🤖',
+        gradient: 'from-fuchsia-400 to-pink-400',
+        github: 'https://github.com/ashwiths/Passion_Student_AI_Tutor_Hackthon',
+        demo: 'https://github.com/ashwiths/Passion_Student_AI_Tutor_Hackthon',
+        border: 'border-fuchsia-200/60 dark:border-fuchsia-700/40',
+    },
+    {
+        title: 'Passion Student AI Tutor',
+        description: 'An AI-powered tutoring platform built with JavaScript that provides personalized academic assistance, adaptive learning paths, and interactive Q&A features.',
+        tech: ['JavaScript', 'AI', 'React'],
+        emoji: '📚',
+        gradient: 'from-emerald-400 to-green-400',
+        github: 'https://github.com/ashwiths/Passion_student_AI_Tutor',
+        demo: 'https://github.com/ashwiths/Passion_student_AI_Tutor',
+        border: 'border-emerald-200/60 dark:border-emerald-700/40',
+    },
+    {
+        title: 'CRM System',
+        description: 'A Customer Relationship Management system built with JavaScript for tracking leads, managing customer interactions, and visualizing sales pipeline data.',
+        tech: ['JavaScript', 'React', 'CRM', 'Node.js'],
+        emoji: '🤝',
+        gradient: 'from-orange-400 to-amber-400',
+        github: 'https://github.com/ashwiths/CRM',
+        demo: 'https://github.com/ashwiths/CRM',
+        border: 'border-orange-200/60 dark:border-orange-700/40',
+    },
+    {
+        title: 'Null Media',
+        description: 'A media-focused JavaScript project delivering content management and media display features with a clean, minimal interface for seamless user experience.',
+        tech: ['JavaScript', 'Media', 'React', 'CSS'],
+        emoji: '🎬',
+        gradient: 'from-gray-500 to-zinc-400',
+        github: 'https://github.com/ashwiths/null-media',
+        demo: 'https://github.com/ashwiths/null-media',
+        border: 'border-gray-200/60 dark:border-gray-700/40',
+    },
+    {
+        title: 'Null Project',
+        description: 'An experimental JavaScript project exploring innovative web development patterns, component architecture, and modern frontend tooling approaches.',
+        tech: ['JavaScript', 'React', 'Experimental'],
+        emoji: '🧪',
+        gradient: 'from-lime-400 to-green-400',
+        github: 'https://github.com/ashwiths/null-project',
+        demo: 'https://github.com/ashwiths/null-project',
+        border: 'border-lime-200/60 dark:border-lime-700/40',
+    },
+    {
+        title: 'Tracker',
+        description: 'A real-time tracking application built with JavaScript for monitoring and logging data, with a clean dashboard UI and progress visualization features.',
+        tech: ['JavaScript', 'React', 'Tracking', 'UI'],
+        emoji: '📍',
+        gradient: 'from-pink-400 to-rose-400',
+        github: 'https://github.com/ashwiths/tracker',
+        demo: 'https://github.com/ashwiths/tracker',
+        border: 'border-pink-200/60 dark:border-pink-700/40',
+    },
+    {
+        title: 'Code Alpha',
+        description: 'A CSS-focused web development project from a training program, featuring responsive design techniques, animations, and modern CSS layout patterns.',
+        tech: ['CSS', 'HTML', 'Responsive Design'],
+        emoji: '💅',
+        gradient: 'from-sky-400 to-blue-400',
+        github: 'https://github.com/ashwiths/code-alpa-1',
+        demo: 'https://github.com/ashwiths/code-alpa-1',
+        border: 'border-sky-200/60 dark:border-sky-700/40',
+    },
+    {
+        title: 'ATM OCTA NET',
+        description: 'An ATM simulation web project developed as part of the Octanet internship program, implementing ATM functionalities and user interface flows.',
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        emoji: '🏧',
+        gradient: 'from-teal-400 to-emerald-400',
+        github: 'https://github.com/ashwiths/ATM-OCTA-NET',
+        demo: 'https://github.com/ashwiths/ATM-OCTA-NET',
+        border: 'border-teal-200/60 dark:border-teal-700/40',
+    },
+    {
+        title: 'Octanet Web Development',
+        description: 'Web development projects completed as part of the Octanet internship, showcasing real-world frontend implementations and modern web design skills.',
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        emoji: '🌐',
+        gradient: 'from-violet-400 to-purple-400',
+        github: 'https://github.com/ashwiths/Octanet-web-development',
+        demo: 'https://github.com/ashwiths/Octanet-web-development',
+        border: 'border-violet-200/60 dark:border-violet-700/40',
     },
 ];
 
@@ -39,11 +178,6 @@ export default function Projects() {
     return (
         <section id="projects" className="relative py-24 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-pastel-peach/40 via-transparent to-pastel-lavender/30 dark:from-dark-surface/30 dark:to-dark-card/40" />
-
-            {/* Stickers */}
-            <Sticker emoji="📁" className="top-10 right-10 md:right-32" animDelay={0.3} size="text-3xl" style={{ position: 'absolute' }} />
-            <Sticker emoji="💡" className="bottom-20 left-8 md:left-20" animDelay={0.6} size="text-3xl" style={{ position: 'absolute' }} />
-            <Sticker emoji="🔧" className="top-1/2 left-4 md:left-12" animDelay={0.9} size="text-2xl" style={{ position: 'absolute' }} />
 
             <div className="relative z-10 max-w-6xl mx-auto px-6">
                 {/* Header */}
@@ -111,7 +245,7 @@ export default function Projects() {
                                         Code
                                     </motion.a>
                                     <motion.a
-                                        href={project.github}
+                                        href={project.demo}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center gap-1.5 text-sm text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"

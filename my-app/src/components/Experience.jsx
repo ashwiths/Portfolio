@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { FiMapPin, FiCalendar, FiCheckCircle, FiExternalLink } from 'react-icons/fi';
-import Sticker from './Sticker';
 
 const expBlueLab = {
     role: "Chief Executive Officer (CEO)",
@@ -41,10 +40,6 @@ export default function Experience() {
     return (
         <section id="experience" className="relative py-24 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-tr from-pastel-mint/40 via-transparent to-pastel-sky/30 dark:from-dark-bg dark:to-dark-card/50" />
-
-            {/* Stickers */}
-            <Sticker type="note" className="top-12 right-6 md:right-20 hidden md:flex" animDelay={0.5} size={50} rotate={8} opacity={0.6} />
-            <Sticker type="terminal" className="bottom-16 left-6 md:left-14 hidden md:flex" animDelay={0.8} size={54} rotate={-5} opacity={0.6} />
 
             <div className="relative z-10 max-w-4xl mx-auto px-6">
                 {/* Header */}

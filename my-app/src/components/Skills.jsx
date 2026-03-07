@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import Sticker from './Sticker';
 
 const skills = [
     { name: 'HTML', emoji: '🏗️', color: 'bg-rose-100    dark:bg-rose-900/30    text-rose-700    dark:text-rose-300', border: 'border-rose-300/60' },
@@ -18,10 +17,6 @@ export default function Skills() {
     return (
         <section id="skills" className="relative py-24 overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-bl from-pastel-lilac/50 via-transparent to-pastel-peach/40 dark:from-dark-surface/30 dark:to-dark-card/30" />
-
-            {/* Stickers */}
-            <Sticker emoji="🏷️" className="top-12 left-8 md:left-24" animDelay={0.4} size="text-3xl" style={{ position: 'absolute' }} />
-            <Sticker emoji="🎯" className="bottom-12 right-8 md:right-24" animDelay={0.7} size="text-3xl" style={{ position: 'absolute' }} />
 
             <div className="relative z-10 max-w-4xl mx-auto px-6">
                 {/* Header */}
