@@ -116,7 +116,7 @@ export default function Hero() {
                         {/* Name */}
                         <motion.h1
                             variants={itemVariants}
-                            className="font-handwritten text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gradient leading-none mb-4"
+                            className="font-handwritten text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gradient leading-none mb-4 overflow-visible pr-2 pb-2"
                         >
                             Infant Ashil A
                         </motion.h1>
