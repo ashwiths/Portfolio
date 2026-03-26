@@ -17,7 +17,9 @@ const expBlueLab = {
     links: [
         { name: "BlueLab Website", url: "https://www.bluelabtech.space/" },
         { name: "Project Hub", url: "https://projecthub.bluelabtech.space/" },
-        { name: "Project Check", url: "https://check.bluelabtech.space/" }
+        { name: "Project Check", url: "https://check.bluelabtech.space/" },
+        { name: "DevKit", url: "https://dev.bluelabtech.space/" },
+        { name: "SheetHub", url: "https://sheethub.bluelabtech.space/" }
     ],
     tech: ["React", "Tailwind CSS", "Web Development", "UI/UX Design", "Project Management"]
 };
