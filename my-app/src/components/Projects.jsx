@@ -1,7 +1,29 @@
 import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { FiGithub, FiExternalLink, FiStar } from 'react-icons/fi';
 
 const projects = [
+    {
+        title: 'DevKit',
+        description: 'A comprehensive developer toolkit platform featuring a suite of productivity tools — including a PDF suite, code utilities, and developer-focused utilities — all wrapped in a sleek, modern dashboard interface.',
+        tech: ['React', 'Node.js', 'Express', 'JavaScript', 'Tailwind CSS'],
+        emoji: '⚒️',
+        gradient: 'from-blue-500 to-cyan-400',
+        github: 'https://github.com/ashwiths',
+        demo: 'https://dev.bluelabtech.space/',
+        border: 'border-blue-300/60 dark:border-blue-600/40',
+        featured: true,
+    },
+    {
+        title: 'SheetHub',
+        description: 'A smart spreadsheet collaboration hub that lets users create, manage, and share spreadsheets online. Built with a focus on real-time usability, clean UX, and powerful data handling.',
+        tech: ['React', 'JavaScript', 'Node.js', 'CSS'],
+        emoji: '📊',
+        gradient: 'from-emerald-500 to-teal-400',
+        github: 'https://github.com/ashwiths',
+        demo: 'https://sheethub.bluelabtech.space/',
+        border: 'border-emerald-300/60 dark:border-emerald-600/40',
+        featured: true,
+    },
     {
         title: 'Portfolio',
         description: 'A modern personal portfolio website built with React and JavaScript, showcasing projects, skills, and professional experience with smooth animations.',
@@ -206,7 +228,14 @@ export default function Projects() {
                             {/* Color bar */}
                             <div className={`h-2 w-full bg-gradient-to-r ${project.gradient}`} />
 
-                            <div className="p-6">
+                            <div className="p-6 relative">
+                                {/* Featured badge */}
+                                {project.featured && (
+                                    <span className="absolute top-0 right-0 flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-bl-xl rounded-tr-none bg-gradient-to-r from-yellow-400/90 to-orange-400/90 text-white shadow-md">
+                                        <FiStar className="w-3 h-3" /> Featured
+                                    </span>
+                                )}
+
                                 {/* Emoji */}
                                 <div className="text-3xl mb-3">{project.emoji}</div>
 
