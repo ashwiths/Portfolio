@@ -33,8 +33,8 @@ export default function Hero() {
 
         // Create an invisible link to trigger the download
         const link = document.createElement('a');
-        link.href = '/Infant_Ashil_A_Resume.pdf';
-        link.download = 'Infant_Ashil_A_Resume.pdf';
+        link.href = '/resume.jpg';
+        link.download = 'Infant_Ashil_A_Resume.jpg';
         document.body.appendChild(link);
 
         // Trigger the download synchronously to avoid browser popup blockers
