@@ -37,11 +37,12 @@ export default function Hero() {
         link.download = 'Infant_Ashil_A_Resume.pdf';
         document.body.appendChild(link);
 
+        // Trigger the download synchronously to avoid browser popup blockers
+        link.click();
+        document.body.removeChild(link);
+
         // Simulate a slight delay for the animation
         setTimeout(() => {
-            link.click();
-            document.body.removeChild(link);
-
             setIsDownloading(false);
             setDownloadComplete(true);
 
